@@ -16,4 +16,4 @@ class Song(models.Model):
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE) #many-to-one... one artist can have many songs
 
     def __str__(self):
-        return (self.title)
+        return self.title and self.artist_name
