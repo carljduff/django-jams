@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'music_library.apps.MusicLibraryConfig',
     'django.contrib.admin',
+    'music_library.apps.MusicLibraryConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -85,6 +85,9 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.gitpod.io',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

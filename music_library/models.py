@@ -1,6 +1,5 @@
 from django.db import models
 
-from django.db import models
 
 class Artist(models.Model):
     name = models.CharField(max_length=200, blank=False, null=False)
@@ -17,3 +16,10 @@ class Song(models.Model):
 
     def __str__(self):
         return self.title and self.artist_name
+
+class Genre(models.Model):
+    title = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title
+
